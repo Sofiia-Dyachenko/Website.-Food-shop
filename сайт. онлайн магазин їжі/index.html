@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #EC8C38;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('pexels-chanwalrus-958545 1.png') no-repeat center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #EC8C38;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #D9732F;
+        }
+
+        .menu {
+            background-color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .menu-item button {
+            background-color: #EC8C38;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item button:hover {
+            background-color: #D9732F;
+        }
+
+        .cities {
+            background-color: #333333;
+            color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .cities h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .cities-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .city {
+            background-color: #444;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .city:hover {
+            background-color: #555;
+        }
+
+        .gifts {
+            background-color: #EC8C38;
+            color: white;
+            padding: 50px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gifts .text {
+            max-width: 50%;
+        }
+
+        .gifts h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .gifts p {
+            font-size: 1.2em;
+        }
+
+        .gifts img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .feedback {
+            background-color: #f9f9f9;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .feedback h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .feedback form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .feedback form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .feedback form input,
+        .feedback form textarea,
+        .feedback form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback form button {
+            background-color: #EC8C38;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .feedback form button:hover {
+            background-color: #D9732F;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        nav ul li a {
+    color: white; /* Білий колір тексту */
+    text-decoration: none; /* Забираємо підкреслення */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні (за бажанням) */
+    color: #333; /* Можна змінити колір при наведенні, наприклад, на золотий */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Food Haven</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="locations.html">Локації</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="about_us.html">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Ласкаво просимо до Food Haven</h1>
+        <p>Смакуйте найкращі страви та підтримуйте наших воїнів ЗСУ! 5% від кожного замовлення ми передаємо на допомогу українським захисникам.</p>
+        <button>Замовити зараз</button>
+    </div>
+
+    <section class="menu">
+        <h2>Наше Меню</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="pizza.png" alt="Піца">
+                <h3>Піца</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="burger.png" alt="Бургер">
+                <h3>Бургер</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="pasta.png" alt="Паста">
+                <h3>Паста</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="croissant.png" alt="Круасан">
+                <h3>Круасан</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="salad.png" alt="Салат">
+                <h3>Салат</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="sushi.png" alt="Суші">
+                <h3>Суші</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="cinnamon-roll.png" alt="Сінабони">
+                <h3>Сінабони</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="cheesecake.png" alt="Чізкейк">
+                <h3>Чізкейк</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="coffee.png" alt="Кава">
+                <h3>Кава</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="tea.png" alt="Чай">
+                <h3>Чай</h3>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="juice.png" alt="Сік">
+                <h3>Сік</h3>
+                <button>Замовити</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cities">
+        <h2>Міста, де можна замовити</h2>
+        <div class="cities-list">
+            <div class="city">Нікополь</div>
+            <div class="city">Київ</div>
+            <div class="city">Одеса</div>
+            <div class="city">Львів</div>
+            <div class="city">Харків</div>
+            <div class="city">Дніпро</div>
+            <div class="city">Запоріжжя</div>
+            <div class="city">Івано-Франківськ</div>
+            <div class="city">Чернівці</div>
+            <div class="city">Вінниця</div>
+            <div class="city">Полтава</div>
+            <div class="city">Черкаси</div>
+            <div class="city">Суми</div>
+            <div class="city">Рівне</div>
+            <div class="city">Миколаїв</div>
+            <div class="city">Тернопіль</div>
+            <div class="city">Хмельницький</div>
+            <div class="city">Житомир</div>
+            <div class="city">Луцьк</div>
+            <div class="city">Кропивницький</div>
+            <div class="city">Херсон</div>
+            <div class="city">Ужгородн</div>
+        </div>
+    </section>
+
+    <section class="gifts">
+        <div class="text">
+            <h2>Подарунки для вас!</h2>
+            <p>При замовленні від 500 грн ви гарантовано отримаєте один із подарунків:</p>
+            <ul>
+                <li>Кока-Кола Zero 2л</li>
+                <li>Корейський рамен</li>
+                <li>Чіпси Pringles</li>
+            </ul>
+        </div>
+        <img src="Group 8.png" alt="Подарунки">
+    </section>
+
+    <section class="feedback">
+        <h2>Зворотний зв'язок</h2>
+        <form action="#" method="post">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Надіслати</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Food Haven. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
+
+

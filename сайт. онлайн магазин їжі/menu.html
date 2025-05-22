@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Food Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #EC8C38;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            background-color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+        }
+
+        .menu-item p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .menu-item button {
+            background-color: #EC8C38;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item button:hover {
+            background-color: #D9732F;
+        }
+        .menu-item, .promotion-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* або іншу відповідну висоту */
+}
+
+.menu-item button, .promotion-item button {
+    align-self: center; /* Для центрування кнопки */
+}
+
+        .promotions {
+            background-color: #f9f9f9;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .promotions h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .promotion-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .promotion-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            background-color: white;
+        }
+
+        .promotion-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #ffffff; /* можна додати фон для порожніх ділянок */
+}
+
+
+        .promotion-item h3 {
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+        }
+
+        .promotion-item p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .promotion-item button {
+            background-color: #EC8C38;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .promotion-item button:hover {
+            background-color: #D9732F;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        nav ul li a {
+    color: white; /* Білий колір тексту */
+    text-decoration: none; /* Забираємо підкреслення */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні (за бажанням) */
+    color: #333; /* Можна змінити колір при наведенні, наприклад, на золотий */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Food Haven</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="locations.html">Локації</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="about_us.html">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h2>Наше Меню</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="pizza.png" alt="Піца">
+                <h3>Піца</h3>
+                <p>Смачні соуси, свіжі овочі, м'ясо, ковбаса чи морепродукти, посипані сиром. Все на ваш вибір!</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="burger.png" alt="Бургер">
+                <h3>Бургер</h3>
+                <p>Соковитий бургер із яловичиною, сиром чеддер та свіжими овочами.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="pasta.png" alt="Паста">
+                <h3>Паста</h3>
+                <p>Італійська паста з соусом карбонара та ароматним сиром.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="salad.png" alt="Салат">
+                <h3>Салат</h3>
+                <p>Свіжі овочі, зелень та легкий дресинг для чудового поєднання смаків та вітамінів.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="sushi.png" alt="Суші">
+                <h3>Суші</h3>
+                <p>На різний смак та навіть для любителей печених суш.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="nuggets.png" alt="Нагетси">
+                <h3>Нагетси</h3>
+                <p>Соковиті курячі нагетси в хрусткій паніровці.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="steak.png" alt="Стейк">
+                <h3>Стейк</h3>
+                <p>Соковитий яловичий стейк середнього просмаження.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="tacos.png" alt="Такос">
+                <h3>Такос</h3>
+                <p>Мексиканські такос із куркою та овочами.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="fish.png" alt="Риба на грилі">
+                <h3>Риба на грилі</h3>
+                <p>Грильована риба з лимонним соусом.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="kimchi.png" alt="Риба на грилі">
+                <h3>Кімчі</h3>
+                <p>Гостра ферментована капуста з часником, імбиром та специями</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="ramen.png" alt="Риба на грилі">
+                <h3>Рамен</h3>
+                <p>Із тонким бульйоном, м'ясом, яйцем, овочами та спеціями, що створюють незабутній смак азії.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="ris.png" alt="Риба на грилі">
+                <h3>Рис</h3>
+                <p>Легкий та ситний гарнір, приготований з рисом, овочами та соєвим соусом.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="cheesecake.png" alt="Чізкейк">
+                <h3>Чізкейк</h3>
+                <p>Кремовий чізкейк на основі з печива.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="croissant.png" alt="Круасан">
+                <h3>Круасан</h3>
+                <p>Свіжий круасан із вершковим маслом та шоколадною начинкою.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="cinnamon-roll.png" alt="Сінабони">
+                <h3>Сінабони</h3>
+                <p>Пишні булочки з корицею та вершковою глазур'ю.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="pancakes.png" alt="Млинці">
+                <h3>Панкейки</h3>
+                <p>М'які млинці, що подарують ранок із теплом та затишком.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="coffee.png" alt="Кава">
+                <h3>Кава</h3>
+                <p>Ароматна кава з додаванням молока або вершків.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="tea.png" alt="Чай">
+                <h3>Чай</h3>
+                <p>Свіжозаварений чай із трав'яними нотками.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="juice.png" alt="Сік">
+                <h3>Сік</h3>
+                <p>Натуральний свіжовичавлений сік із сезонних фруктів.</p>
+                <button>Замовити</button>
+            </div>
+            <div class="menu-item">
+                <img src="alcohol.png" alt="Десерт дня">
+                <h3>Алкоголь</h3>
+                <p>Від класичних коктейлів до витриманих вин, що доповнять будь-яку страву.</p>
+                <button>Замовити</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="promotions">
+        <h2>Акції</h2>
+        <div class="promotion-items">
+            <div class="promotion-item">
+                <img src="cat1.png" alt="Акція 1">
+                <h3>Подарунок при замовленні від 500 грн</h3>
+                <p>Отримайте Coca-Cola Zero 2л, корейський рамен або чіпси Pringles у подарунок!</p>
+                <button>Дізнатись більше</button>
+            </div>
+            <div class="promotion-item">
+                <img src="cat2.png" alt="Акція 2">
+                <h3>Знижка на другу страву</h3>
+                <p>Замовляйте другу страву зі знижкою 50%!</p>
+                <button>Дізнатись більше</button>
+            </div>
+            <div class="promotion-item">
+                <img src="cat3.png" alt="Акція 3">
+                <h3>Безкоштовна доставка</h3>
+                <p>Безкоштовна доставка при замовленні від 300 грн.</p>
+                <button>Дізнатись більше</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Food Haven. Всі права захищені.</p>
+    </footer>
+</body>
+</html>

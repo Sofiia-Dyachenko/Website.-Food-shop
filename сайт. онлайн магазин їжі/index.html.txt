@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('https://via.placeholder.com/1200x600') no-repeat center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #e55b4d;
+        }
+
+        .menu {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .menu-item button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu-item button:hover {
+            background-color: #e55b4d;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Food Haven</div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Locations</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Food Haven</h1>
+        <p>Your one-stop destination for delicious food!</p>
+        <button>Order Now</button>
+    </div>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/200" alt="Pizza">
+                <h3>Pizza</h3>
+                <button>Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/200" alt="Burger">
+                <h3>Burger</h3>
+                <button>Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/200" alt="Pasta">
+                <h3>Pasta</h3>
+                <button>Order</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Food Haven. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li').forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`Navigating to ${item.textContent}`);
+            });
+        });
+
+        document.querySelectorAll('.menu-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Adding item to cart');
+            });
+        });
+    </script>
+</body>
+</html>
